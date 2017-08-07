@@ -1,0 +1,18 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+
+    producer_manager:
+                    class:  BeerBundle\Services\ProducerManager
+                    arguments: ["@doctrine.orm.entity_manager", "@other_services"]
+
+    other_services:
+                   class: BeerBundle\Services\OtherServices
+                   arguments: ["@validator"]
+
+    beer_manager:
+                   class: BeerBundle\Services\BeerManager
+                   arguments: ["@doctrine.orm.entity_manager", "@other_services"]

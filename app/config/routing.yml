@@ -1,0 +1,8 @@
+beer:
+    resource: "@BeerBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
