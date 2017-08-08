@@ -49,7 +49,7 @@ class ProducerManager
                 return ['success' => true, 'errorsLog' => false];
             }
         }else{
-            return 'User not found!';
+            return false;
         }
     }
 
@@ -61,7 +61,7 @@ class ProducerManager
             $this->repoProducer->removeObject($actualProducer);
             return true;
         }else{
-            return 'Producer not found!';
+            return false;
         }
     }
 
