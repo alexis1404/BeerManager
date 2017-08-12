@@ -38,7 +38,7 @@ class BeerManager
                 return ['success' => true, 'errorsLog' => false];
             }
         }else{
-            return 'Producer not found!';
+            return false;
         }
 
     }
@@ -83,7 +83,7 @@ class BeerManager
                 return ['success' => true, 'errorsLog' => false];
             }
         }else{
-            return 'Beer not found!';
+            return false;
         }
     }
 
@@ -95,7 +95,7 @@ class BeerManager
             $this->repoBeer->removeObject($actualBeer);
             return true;
         }else{
-            return 'Beer not found!';
+            return false;
         }
     }
 }
